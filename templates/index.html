@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Meyawo landing page.">
     <meta name="author" content="Devcrud">
-    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <title>Meyawo Landing page</title>
     <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='/vendors/themify-icons/css/themify-icons.css') }}">
     <!-- Bootstrap + Meyawo main styles -->
-	<link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/meyawo.css') }}">
 </head>
+
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <a class="logo" href="#">Machine Learning</a>         
+            <a class="logo" href="#">Machine Learning</a>
             <ul class="nav">
                 <li class="item">
                     <a class="link" href="#home">Home</a>
@@ -42,10 +44,10 @@
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
+                    <div class="hamburger-inner"></div>
                 </div>
             </a>
-        </div>          
+        </div>
     </nav><!-- End of Page Navbar -->
 
     <!-- page header -->
@@ -56,12 +58,12 @@
                 <span class="up">HI!</span>
                 <span class="down">Take a test!</span>
             </h1>
-            <p class="header-subtitle">Which class is your wine in?</p>            
-            <a href="form2.html">
+            <p class="header-subtitle">Which class is your wine in?</p>
+            <a href="form2">
                 <button class="btn btn-primary">Take Test</button>
             </a>
-            
-        </div>              
+
+        </div>
     </header><!-- end of page header -->
 
     <!-- about section -->
@@ -71,19 +73,20 @@
             <!-- about wrapper -->
             <div class="about">
                 <div class="about-img-holder">
-                    <img src="assets/imgs/man.png" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <img src="assets/imgs/man.png" class="about-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                 </div>
                 <div class="about-caption">
                     <p class="section-subtitle">What is this ?</p>
                     <h2 class="section-title mb-3">About this page</h2>
                     <p>
-                        Halaman ini merupakan halaman yang dibuat sebagian dari tugas kelompok Machine Learning kelas A 
-                        <br>Dibuat menggunakan Google Colab.            
+                        Halaman ini merupakan halaman yang dibuat sebagian dari tugas kelompok Machine Learning kelas A
+                        <br>Dibuat menggunakan Google Colab.
                     </p>
                     <a href="https://colab.research.google.com/drive/1r3Bv7rT8-aA8N3GRSvRZeNPq_mFgh5Q7?usp=sharing">
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Go to Colab</button>
+                        <button class="btn-rounded btn btn-outline-primary mt-4">Go to Colab</button>
                     </a>
-                </div>              
+                </div>
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
     </section> <!-- end of about section -->
@@ -98,7 +101,10 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/pencil-case.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <img src="{{ url_for('static', filename='/imgs/pencil-case.svg')}}""
+                                alt=" Download free bootstrap 4 landing page, free boootstrap 4 templates, Download
+                                free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                                class="icon">
                             <h6 class="title">Garry Yehosyafat</h6>
                             <p class="subtitle">24060120140115</p>
                         </div>
@@ -107,7 +113,9 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/responsive.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <img src="{{ url_for('static', filename='/imgs/responsive.svg')}}"
+                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                                class="icon">
                             <h6 class="title">Kurnia Faturahman</h6>
                             <p class="subtitle">24060120140163</p>
                         </div>
@@ -116,16 +124,20 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/responsive.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <img src="{{ url_for('static', filename='/imgs/responsive.svg')}}"
+                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                                class="icon">
                             <h6 class="title">Ratu Aubrey Khairani</h6>
-                            <p class="subtitle" style = "text-align:center;">24060120130124</p>
+                            <p class="subtitle" style="text-align:center;">24060120130124</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/toolbox.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <img src="{{ url_for('static', filename='/imgs/toolbox.svg')}}"
+                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                                class="icon">
                             <h6 class="title">Ryan Armando Sidabutar</h6>
                             <p class="subtitle">24060120140169</p>
                         </div>
@@ -134,7 +146,9 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/analytics.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <img src="{{ url_for('static', filename='/imgs/analytics.svg')}}"
+                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
+                                class="icon">
                             <h6 class="title">Sabdiel Tarigan</h6>
                             <p class="subtitle">24060120120028</p>
                         </div>
@@ -144,16 +158,17 @@
         </div>
     </section><!-- end of service section -->
 
-	
-	<!-- core  -->
+
+    <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
 
 </body>
+
 </html>

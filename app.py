@@ -20,6 +20,9 @@ app = flask.Flask(__name__, template_folder='templates')
 
 
 @app.route('/')
+def home():
+    return flask.render_template('index.html')
+
 @app.route('/form2')
 def form2():
     return flask.render_template('form2.html')
@@ -41,17 +44,6 @@ def result():
     if request.method == 'POST':
         Alcohol = request.form['alc']
         Malic_Acid = request.form['mal']
-        Ash = request.form['ash']
-        Ash_Alcanity = request.form['ash_al']
-        Magnesium = request.form['mag']
-        Total_Phenols = request.form['total_phe']
-        Flavanoids = request.form['flav']
-        Nonflavanoid_Phenols = request.form['nonflav']
-        Proanthocyanins = request.form['pro']
-        Color_Intensity = request.form['col']
-        Hue = request.form['hue']
-        OD280 = request.form['od']
-        Proline = request.form['prol']
 
         to_predict_list = list(map(int, [Alcohol, Malic_Acid]))
         result = ValuePredictor(to_predict_list)
@@ -63,7 +55,7 @@ def result():
         elif int(result) == 2:
             prediction = 'Wine ini termasuk ke dalam wine tipe 3!'
 
-        return render_template("templates/result.html", prediction=prediction)
+        return render_template("result.html", prediction=prediction)
 
 
 if __name__ == "__main__":
