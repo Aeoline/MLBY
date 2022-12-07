@@ -49,11 +49,11 @@ def result():
         result = ValuePredictor(to_predict_list)
 
         if int(result) == 0:
-            prediction = 'Wine ini termasuk ke dalam wine tipe 1!'
+            prediction = 'Wine dengan rasa manis, tidak terlalu pedas dan tidak terlalu asam'
         elif int(result) == 1:
-            prediction = 'Wine ini termasuk ke dalam wine tipe 2!'
+            prediction = 'Wine dengan rasa manis, sedikit lebih pedas, dan tidak terlalu asam'
         elif int(result) == 2:
-            prediction = 'Wine ini termasuk ke dalam wine tipe 3!'
+            prediction = 'Wine dengan rasa asam yang lebih kuat'
 
         return render_template("result.html", prediction=prediction)
 
